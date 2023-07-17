@@ -23,12 +23,12 @@ public class ReadProperties {
         return properties.getProperty("browser");
     }
 
-    public static String username() {
-        return properties.getProperty("username");
+    public static String height() {
+        return properties.getProperty("height");
     }
 
-    public static String password() {
-        return properties.getProperty("password");
+    public static String weight() {
+        return properties.getProperty("weight");
     }
 
     public static boolean isHeadless() {

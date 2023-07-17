@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.configuration.ReadProperties;
 
-public class BasicLocatorsTest {
+public class BasicLocatorsTestHW {
     protected WebDriver driver;
 
     @BeforeMethod
@@ -21,32 +21,25 @@ public class BasicLocatorsTest {
     }
 
     @Test
-    public void basicLocatorsTest_1() {
+    public void basicLocatorsTest() {
         driver.get(ReadProperties.getUrl());
 
         // Find webElement by ID
-        driver.findElement(By.id("name")).sendKeys(ReadProperties.username());
+        driver.findElement(By.id("bmiVar1")).sendKeys(ReadProperties.height());
 
         // Find webElement by Name
-        driver.findElement(By.name("password")).sendKeys(ReadProperties.password());
-
-        // Find webElement by Tag
-        driver.findElement(By.tagName("button")).click();
-    }
-
-    @Test
-    public void basicLocatorsTest_2() {
-        driver.get(ReadProperties.getUrl());
-
-        // Find webElement by LinkText
-        driver.findElement(By.linkText("Forgot your password?")).click();
+        driver.findElement(By.name("bmiVar2")).sendKeys(ReadProperties.weight());
 
         // Find webElement by ClassName
-        driver.findElement(By.className("forgot_passwordpage-request-cancel")).click();
+        driver.findElement(By.className("btn-calculate")).click();
+
+        // Find webElement by Tag
+        driver.findElement(By.tagName("sup"));
+
+        // Find webElement by LinkText
+        driver.findElement(By.linkText("Статьи"));
 
         // Find webElement by PartialLinkText
-        driver.findElement(By.partialLinkText("your password?")).click();
+        driver.findElement(By.partialLinkText("обратной связи"));
     }
-
-
 }
