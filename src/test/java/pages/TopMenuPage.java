@@ -21,3 +21,4 @@ public class TopMenuPage extends BasePage {
         return driver.findElement(topPanelLocator);
     }
 }
+
